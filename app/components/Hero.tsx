@@ -134,6 +134,23 @@ export function Hero() {
           <span className="bg-bone/70 backdrop-blur-sm px-3 py-1">{t(copy.duality.title)}</span>
         </p>
 
+        {/* Desktop CTAs sit right under the subtitle */}
+        <div className="rise delay-5 hidden md:flex items-center gap-3 mt-6">
+          <Link
+            href="#rezervace"
+            className="group inline-flex items-center justify-center gap-3 bg-ink text-bone px-6 py-3.5 font-display tracking-[0.25em] text-xs uppercase hover:bg-wine transition-colors shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
+          >
+            <span className="inline-block w-1.5 h-1.5 bg-ember rounded-full heartbeat" />
+            {t(copy.hero.primaryCta)}
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </Link>
+          <Link
+            href="#manifest"
+            className="inline-flex items-center gap-2 px-3 py-3.5 font-display tracking-[0.25em] text-xs uppercase text-bone bg-ember/90 hover:bg-ember"
+          >
+            {t(copy.hero.secondaryCta)} ↓
+          </Link>
+        </div>
       </div>
 
       {/* Side labels (desktop only) */}
@@ -150,10 +167,10 @@ export function Hero() {
           <span className="hidden sm:inline-flex font-display tracking-[0.4em] text-[10px] uppercase text-wine">
             {t(copy.hero.leftSub)}
           </span>
-          <div className="flex items-center gap-2 md:gap-3 w-full sm:w-auto justify-center">
+          <div className="md:hidden flex items-center gap-2 w-full justify-center">
             <Link
               href="#rezervace"
-              className="group inline-flex flex-1 sm:flex-initial items-center justify-center gap-2 md:gap-3 bg-ink text-bone px-4 md:px-6 py-3 md:py-3.5 font-display tracking-[0.2em] md:tracking-[0.25em] text-[11px] md:text-xs uppercase hover:bg-wine transition-colors shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
+              className="group inline-flex flex-1 items-center justify-center gap-2 bg-ink text-bone px-4 py-3 font-display tracking-[0.2em] text-[11px] uppercase hover:bg-wine transition-colors shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
             >
               <span className="inline-block w-1.5 h-1.5 bg-ember rounded-full heartbeat" />
               {t(copy.hero.primaryCta)}
@@ -161,7 +178,7 @@ export function Hero() {
             </Link>
             <Link
               href="#manifest"
-              className="inline-flex items-center gap-2 px-3 py-3 md:py-3.5 font-display tracking-[0.2em] md:tracking-[0.25em] text-[11px] md:text-xs uppercase text-bone bg-ember/90 hover:bg-ember"
+              className="inline-flex items-center gap-2 px-3 py-3 font-display tracking-[0.2em] text-[11px] uppercase text-bone bg-ember/90 hover:bg-ember"
             >
               {t(copy.hero.secondaryCta)} ↓
             </Link>

@@ -46,13 +46,10 @@ export function AkcePage() {
             <div className="lg:col-span-5 relative">
               <div className="relative aspect-[3/4] overflow-hidden">
                 <img
-                  src="https://placehold.co/700x900/0c0809/c63a3a?text=PHOENIX+%C2%B7+BOX&font=oswald"
-                  alt=""
+                  src="/punch.jpg"
+                  alt="Box · Phoenix"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <span className="absolute top-4 left-4 bg-ember text-ink font-display tracking-[0.3em] text-[10px] uppercase px-2 py-1">
-                  Live
-                </span>
               </div>
             </div>
 
@@ -99,9 +96,6 @@ export function AkcePage() {
                   {t(copy.akce.box.cta)}
                   <span className="transition-transform group-hover:translate-x-1">→</span>
                 </a>
-                <span className="inline-flex items-center px-4 py-4 font-display tracking-[0.25em] text-[11px] uppercase text-bone/60 border border-bone/20">
-                  {t(copy.akce.box.perk)}
-                </span>
               </div>
             </div>
           </article>
@@ -120,23 +114,9 @@ export function AkcePage() {
               + Coming soon
             </div>
           </div>
-          <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {t(copy.akce.soonItems).map((it, i) => (
-              <li
-                key={i}
-                className="group relative border border-ink/15 bg-bone p-6 hover:bg-ink hover:text-bone transition-colors"
-              >
-                <div className="font-display tracking-[0.3em] text-[10px] uppercase text-wine group-hover:text-ember">
-                  0{i + 1}
-                </div>
-                <div className="mt-3 font-serif text-2xl leading-tight">{it}</div>
-                <div className="mt-6 inline-flex items-center gap-2 font-display tracking-[0.25em] text-[10px] uppercase opacity-60">
-                  Brzy / Soon
-                  <span>→</span>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <p className="font-serif italic text-2xl md:text-3xl text-ink/70">
+            {t({ cs: "Zatím žádné novinky.", en: "No news yet.", ru: "Пока новостей нет." })}
+          </p>
 
           <div className="mt-16">
             <Link

@@ -19,7 +19,7 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const saved = typeof window !== "undefined" ? window.localStorage.getItem(STORAGE_KEY) : null;
-    if (saved === "cs" || saved === "en") setLocaleState(saved);
+    if (saved === "cs" || saved === "en" || saved === "ru") setLocaleState(saved);
   }, []);
 
   const setLocale = useCallback((l: Locale) => {
@@ -29,7 +29,8 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
 
   const toggle = useCallback(() => {
     setLocaleState((cur) => {
-      const next: Locale = cur === "cs" ? "en" : "cs";
+      const order: Locale[] = ["cs", "en", "ru"];
+      const next = order[(order.indexOf(cur) + 1) % order.length];
       if (typeof window !== "undefined") window.localStorage.setItem(STORAGE_KEY, next);
       return next;
     });
