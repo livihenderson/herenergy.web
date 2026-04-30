@@ -1,11 +1,10 @@
 "use client";
 
-import { useLocale } from "../lib/LocaleProvider";
-import { copy } from "../lib/copy";
+import { useDictionary } from "./DictionaryProvider";
+import type { ScheduleItem } from "@/get-content";
 
-export function EventCard() {
-  const { t } = useLocale();
-  const items = t(copy.event.items);
+export function EventCard({ schedule }: { schedule: ScheduleItem[] }) {
+  const { t } = useDictionary();
   return (
     <section
       id="rezervace"
@@ -25,7 +24,7 @@ export function EventCard() {
           <div className="lg:col-span-7">
             <div className="inline-flex items-center gap-3 font-display tracking-[0.4em] text-[11px] uppercase text-ember">
               <span className="inline-block w-1.5 h-1.5 bg-ember rounded-full heartbeat" />
-              {t(copy.event.badge)} · {t(copy.event.date)}
+              {t("Main event")} · {t("May 9, 2026")}
             </div>
             <h2 className="mt-6 font-serif text-6xl md:text-8xl leading-[0.88] tracking-tight">
               <span className="bg-wine text-bone px-3 font-display tracking-[0.04em]">HER</span>{" "}
@@ -35,7 +34,7 @@ export function EventCard() {
               </span>
             </h2>
             <p className="mt-6 max-w-lg text-bone/80 text-lg leading-relaxed">
-              {t(copy.event.subtitle)}
+              {t("One day. Two opposites. A community that lifts you up.")}
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3">
@@ -45,11 +44,11 @@ export function EventCard() {
                 rel="noreferrer noopener"
                 className="group inline-flex items-center gap-3 bg-ember text-ink px-6 py-4 font-display tracking-[0.25em] text-xs uppercase hover:bg-bone transition-colors"
               >
-                {t(copy.event.cta)}
+                {t("Reserve your spot")}
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <span className="inline-flex items-center px-4 py-4 font-display tracking-[0.25em] text-xs uppercase text-bone/60 border border-bone/20">
-                {t(copy.event.price)}
+                {t("890 Kč")}
               </span>
             </div>
 
@@ -58,10 +57,10 @@ export function EventCard() {
           <div className="lg:col-span-5">
             <div className="border border-bone/15 bg-ink-soft/60 backdrop-blur p-6 md:p-8">
               <div className="font-display tracking-[0.4em] text-[11px] uppercase text-bone/60 mb-5">
-                {t(copy.event.schedule)}
+                {t("Schedule")}
               </div>
               <ul className="divide-y divide-bone/10">
-                {items.map((it, i) => (
+                {schedule.map((it, i) => (
                   <li key={i} className="py-4 flex items-baseline gap-5">
                     <span
                       className={`font-display tracking-[0.06em] text-2xl md:text-3xl ${
@@ -85,11 +84,11 @@ export function EventCard() {
               <div className="mt-6 pt-6 border-t border-bone/15 grid grid-cols-1 gap-2 text-bone/80">
                 <div className="flex items-center gap-2 text-sm">
                   <span className="inline-block w-1 h-1 bg-ember rounded-full" />
-                  {t(copy.event.place)}
+                  {t("Titan Gym · Ďáblická 2 · Prague")}
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <span className="inline-block w-1 h-1 bg-ember rounded-full" />
-                  {t(copy.event.transit)}
+                  {t("Tram stop: Sídliště Ďáblice")}
                 </div>
               </div>
             </div>

@@ -1,10 +1,9 @@
 "use client";
 
-import { useLocale } from "../lib/LocaleProvider";
-import { copy } from "../lib/copy";
+import { useDictionary } from "./DictionaryProvider";
 
 export function Duality() {
-  const { t } = useLocale();
+  const { t } = useDictionary();
   return (
     <section className="relative">
       <div className="relative grid grid-cols-1 md:grid-cols-2">
@@ -34,13 +33,13 @@ export function Duality() {
 
           <div className="relative max-w-md">
             <div className="font-display tracking-[0.4em] text-[11px] uppercase text-wine">
-              01 — {t(copy.duality.softHead)}
+              01 — {t("Sensuality")}
             </div>
             <h3 className="mt-4 font-serif italic text-5xl md:text-6xl text-ink leading-[0.95]">
-              {t(copy.duality.softHead)}.
+              {t("Sensuality")}.
             </h3>
             <p className="mt-6 text-lg text-ink/80 leading-relaxed">
-              {t(copy.duality.softBody)}
+              {t("Tenderness, breath, femininity. Kamasutra yoga opens body and mind — slow, deep, true.")}
             </p>
           </div>
         </div>
@@ -71,13 +70,13 @@ export function Duality() {
 
           <div className="relative max-w-md ml-auto text-right">
             <div className="font-display tracking-[0.4em] text-[11px] uppercase text-ember">
-              02 — {t(copy.duality.strongHead)}
+              02 — {t("Strength")}
             </div>
             <h3 className="mt-4 font-display tracking-[0.04em] text-6xl md:text-7xl text-bone leading-[0.9] uppercase">
-              {t(copy.duality.strongHead)}
+              {t("Strength")}
             </h3>
             <p className="mt-6 text-lg text-bone/80 leading-relaxed">
-              {t(copy.duality.strongBody)}
+              {t("Boxing as a ritual of resolve. Punches, breath, sweat. You’ll find a fighter you didn’t know was in you.")}
             </p>
           </div>
         </div>
@@ -91,7 +90,7 @@ export function Duality() {
         </div>
       </div>
 
-      {/* Marquee divider */}
+      {/* Marquee divider — brand tokens, intentionally untranslated */}
       <div className="bg-wine text-bone overflow-hidden border-y border-bone/20">
         <div className="ticker-track flex whitespace-nowrap py-5 font-display tracking-[0.4em] text-sm uppercase">
           {Array.from({ length: 2 }).map((_, k) => (

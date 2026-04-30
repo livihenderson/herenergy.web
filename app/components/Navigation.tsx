@@ -1,14 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useLocale } from "../lib/LocaleProvider";
-import { copy } from "../lib/copy";
+import { useDictionary } from "./DictionaryProvider";
+import { LocaleLink } from "./LocaleLink";
 import { BrandMark } from "./BrandMark";
 import { LocaleToggle } from "./LocaleToggle";
 
 export function Navigation() {
-  const { t } = useLocale();
+  const { t } = useDictionary();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -28,30 +27,30 @@ export function Navigation() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 md:px-10 h-16 md:h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center" aria-label="HER ENERGY">
+        <LocaleLink href="/" className="flex items-center" aria-label="HER ENERGY">
           <BrandMark size="md" />
-        </Link>
+        </LocaleLink>
 
         <nav className="hidden md:flex items-center gap-10">
-          <Link href="/" className="link-fancy font-display tracking-[0.18em] text-[12px] uppercase">
-            {t(copy.nav.home)}
-          </Link>
-          <Link
+          <LocaleLink href="/" className="link-fancy font-display tracking-[0.18em] text-[12px] uppercase">
+            {t("Home")}
+          </LocaleLink>
+          <LocaleLink
             href="/akce"
             className="link-fancy font-display tracking-[0.18em] text-[12px] uppercase"
           >
-            {t(copy.nav.events)}
-          </Link>
+            {t("Other events")}
+          </LocaleLink>
         </nav>
 
         <div className="flex items-center gap-3">
           <LocaleToggle />
-          <Link
-            href="#rezervace"
+          <LocaleLink
+            href="/#rezervace"
             className="hidden md:inline-flex items-center gap-2 bg-ink text-bone px-4 py-2 font-display tracking-[0.2em] text-[11px] uppercase hover:bg-wine transition-colors"
           >
-            {t(copy.nav.reserve)}
-          </Link>
+            {t("Reserve")}
+          </LocaleLink>
           <button
             type="button"
             aria-label="Menu"
@@ -67,19 +66,19 @@ export function Navigation() {
       {open && (
         <div className="md:hidden bg-bone border-t border-ink/10">
           <div className="px-6 py-6 flex flex-col gap-5">
-            <Link href="/" onClick={() => setOpen(false)} className="font-serif text-2xl">
-              {t(copy.nav.home)}
-            </Link>
-            <Link href="/akce" onClick={() => setOpen(false)} className="font-serif text-2xl">
-              {t(copy.nav.events)}
-            </Link>
-            <Link
-              href="#rezervace"
+            <LocaleLink href="/" onClick={() => setOpen(false)} className="font-serif text-2xl">
+              {t("Home")}
+            </LocaleLink>
+            <LocaleLink href="/akce" onClick={() => setOpen(false)} className="font-serif text-2xl">
+              {t("Other events")}
+            </LocaleLink>
+            <LocaleLink
+              href="/#rezervace"
               onClick={() => setOpen(false)}
               className="inline-flex w-fit items-center gap-2 bg-ink text-bone px-4 py-2 font-display tracking-[0.2em] text-[11px] uppercase"
             >
-              {t(copy.nav.reserve)}
-            </Link>
+              {t("Reserve")}
+            </LocaleLink>
           </div>
         </div>
       )}

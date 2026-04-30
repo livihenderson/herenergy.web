@@ -1,7 +1,7 @@
 "use client";
 
-import { useLocale } from "../lib/LocaleProvider";
-import { copy } from "../lib/copy";
+import { useDictionary } from "./DictionaryProvider";
+import type { HostCard } from "@/get-content";
 
 const portraits = [
   "/kata_profile.jpg",
@@ -9,15 +9,14 @@ const portraits = [
   "/lunchbox_profile.jpg",
 ];
 
-export function Hosts() {
-  const { t } = useLocale();
-  const list = t(copy.hosts.list);
+export function Hosts({ hosts }: { hosts: HostCard[] }) {
+  const { t } = useDictionary();
   return (
     <section className="relative bg-bone-warm py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="flex items-end justify-between flex-wrap gap-6 mb-16">
           <h2 className="font-serif text-5xl md:text-7xl leading-[0.9]">
-            {t(copy.hosts.title)}
+            {t("Faces of HER ENERGY")}
           </h2>
           <div className="font-display tracking-[0.4em] text-[11px] uppercase text-wine">
             03 — Faces
@@ -25,7 +24,7 @@ export function Hosts() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
-          {list.map((p, i) => (
+          {hosts.map((p, i) => (
             <article
               key={p.name}
               className={`group relative ${i === 1 ? "md:translate-y-12" : i === 2 ? "md:translate-y-6" : ""}`}

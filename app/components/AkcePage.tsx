@@ -1,11 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import { useLocale } from "../lib/LocaleProvider";
-import { copy } from "../lib/copy";
+import { useDictionary } from "./DictionaryProvider";
+import { LocaleLink } from "./LocaleLink";
 
 export function AkcePage() {
-  const { t } = useLocale();
+  const { t } = useDictionary();
   return (
     <>
       {/* Header */}
@@ -20,13 +19,13 @@ export function AkcePage() {
 
         <div className="relative mx-auto max-w-6xl px-6 md:px-10">
           <div className="font-display tracking-[0.4em] text-[11px] uppercase text-wine">
-            {t(copy.akce.eyebrow)}
+            {t("Regular activities")}
           </div>
           <h1 className="mt-5 font-serif text-6xl md:text-8xl leading-[0.9]">
-            {t(copy.akce.title)}
+            {t("Other events")}
           </h1>
           <p className="mt-6 max-w-xl text-lg md:text-xl text-ink/80 leading-relaxed">
-            {t(copy.akce.intro)}
+            {t("Every week there’s space for body and mind. See what’s on right now — and tap to reserve.")}
           </p>
         </div>
       </section>
@@ -55,33 +54,33 @@ export function AkcePage() {
 
             <div className="lg:col-span-7 flex flex-col">
               <div className="font-display tracking-[0.4em] text-[11px] uppercase text-ember">
-                {t(copy.akce.box.tag)}
+                {t("With a pro fighter")}
               </div>
               <h2 className="mt-4 font-display tracking-[0.04em] uppercase text-6xl md:text-7xl leading-[0.9]">
-                {t(copy.akce.box.title)}
+                {t("Fitbox for women")}
               </h2>
               <p className="mt-5 max-w-xl text-bone/80 text-lg leading-relaxed">
-                {t(copy.akce.box.sub)}
+                {t("Train with Kateřina Čavajdová — 9 yrs of pro experience. Technique, conditioning, mindset.")}
               </p>
 
               <dl className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8 max-w-xl">
                 <div>
                   <dt className="font-display tracking-[0.3em] text-[10px] uppercase text-bone/50">
-                    Day
+                    {t("Day")}
                   </dt>
-                  <dd className="mt-1 font-serif text-2xl">{t(copy.akce.box.when)}</dd>
+                  <dd className="mt-1 font-serif text-2xl">{t("Tuesday & Thursday")}</dd>
                 </div>
                 <div>
                   <dt className="font-display tracking-[0.3em] text-[10px] uppercase text-bone/50">
-                    Time
+                    {t("Time")}
                   </dt>
-                  <dd className="mt-1 font-serif text-2xl text-ember">{t(copy.akce.box.time)}</dd>
+                  <dd className="mt-1 font-serif text-2xl text-ember">{t("19:00 – 20:00")}</dd>
                 </div>
                 <div className="sm:col-span-2">
                   <dt className="font-display tracking-[0.3em] text-[10px] uppercase text-bone/50">
-                    Place
+                    {t("Place")}
                   </dt>
-                  <dd className="mt-1 font-serif text-2xl">{t(copy.akce.box.where)}</dd>
+                  <dd className="mt-1 font-serif text-2xl">{t("Titan Gym · Ďáblická 2")}</dd>
                 </div>
               </dl>
 
@@ -93,7 +92,7 @@ export function AkcePage() {
                   className="group inline-flex items-center gap-3 bg-ember text-ink px-6 py-4 font-display tracking-[0.25em] text-xs uppercase hover:bg-bone transition-colors"
                 >
                   <span className="inline-block w-1.5 h-1.5 bg-ink rounded-full heartbeat" />
-                  {t(copy.akce.box.cta)}
+                  {t("Reserve")}
                   <span className="transition-transform group-hover:translate-x-1">→</span>
                 </a>
               </div>
@@ -108,23 +107,23 @@ export function AkcePage() {
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <div className="flex items-end flex-wrap justify-between gap-6 mb-10">
             <h2 className="font-serif italic text-4xl md:text-6xl leading-[0.9]">
-              {t(copy.akce.soonTitle)}
+              {t("Coming soon")}
             </h2>
             <div className="font-display tracking-[0.4em] text-[11px] uppercase text-wine">
-              + Coming soon
+              + {t("Coming soon")}
             </div>
           </div>
           <p className="font-serif italic text-2xl md:text-3xl text-ink/70">
-            {t({ cs: "Zatím žádné novinky.", en: "No news yet.", ru: "Пока новостей нет." })}
+            {t("No news yet.")}
           </p>
 
           <div className="mt-16">
-            <Link
+            <LocaleLink
               href="/"
               className="inline-flex items-center gap-2 font-display tracking-[0.3em] text-xs uppercase border-b border-ink pb-1 hover:border-wine hover:text-wine"
             >
-              ← {t(copy.akce.backHome)}
-            </Link>
+              ← {t("Back to home")}
+            </LocaleLink>
           </div>
         </div>
       </section>
