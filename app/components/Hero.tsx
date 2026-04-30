@@ -24,24 +24,24 @@ export function Hero() {
         src="/kamasutra_phone-31.png"
         alt=""
         aria-hidden
-        className="md:hidden reveal-up pointer-events-none select-none absolute bottom-[14%] left-[-32%] h-[82%] w-auto object-contain object-bottom z-[2]"
+        className="md:hidden reveal-up pointer-events-none select-none absolute bottom-[14%] left-[-32%] h-[58%] max-h-[600px] w-auto object-contain object-bottom z-[2]"
         style={{
           WebkitMaskImage:
-            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 95%)",
+            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 95%)",
           maskImage:
-            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 95%)",
+            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 95%)",
         }}
       />
       <img
         src="/box_phone-32.png"
         alt=""
         aria-hidden
-        className="md:hidden reveal-up pointer-events-none select-none absolute bottom-[14%] right-[-32%] h-[82%] w-auto object-contain object-bottom z-[25]"
+        className="md:hidden reveal-up pointer-events-none select-none absolute bottom-[14%] right-[-32%] h-[58%] max-h-[600px] w-auto object-contain object-bottom z-[2]"
         style={{
           WebkitMaskImage:
-            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 95%)",
+            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 95%)",
           maskImage:
-            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 95%)",
+            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 95%)",
         }}
       />
 
