@@ -7,7 +7,7 @@ import { copy } from "../lib/copy";
 export function Hero() {
   const { t } = useLocale();
   return (
-    <section className="relative h-[100dvh] md:h-[100svh] min-h-[100dvh] md:min-h-[760px] overflow-hidden isolate bg-bone">
+    <section className="relative h-[110vh] md:h-[100svh] min-h-[100dvh] md:min-h-[760px] overflow-hidden isolate bg-bone">
       {/* DESKTOP — wide profile photo */}
       <img
         src="/profile_herenergy.png"
@@ -105,7 +105,7 @@ export function Hero() {
       </div>
 
       {/* Mobile-only subtitle, sitting in the lower fade zone above the CTAs */}
-      <p className="md:hidden rise delay-5 absolute bottom-[18%] inset-x-0 px-6 text-center font-serif italic text-base text-ink z-30">
+      <p className="md:hidden rise delay-5 absolute bottom-56 inset-x-0 px-6 text-center font-serif italic text-base text-ink z-30">
         <span className="bg-bone/75 backdrop-blur-sm px-3 py-1 inline-block">
           {t(copy.duality.title)}
         </span>
@@ -162,7 +162,7 @@ export function Hero() {
       </span>
 
       {/* CTA strip at the bottom */}
-      <div className="absolute bottom-14 md:bottom-10 inset-x-0 px-5 md:px-10 z-30">
+      <div className="absolute bottom-32 md:bottom-10 inset-x-0 px-5 md:px-10 z-30">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 md:gap-4">
           <span className="hidden sm:inline-flex font-display tracking-[0.4em] text-[10px] uppercase text-wine">
             {t(copy.hero.leftSub)}
