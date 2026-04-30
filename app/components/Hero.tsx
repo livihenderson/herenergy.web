@@ -7,7 +7,7 @@ import { copy } from "../lib/copy";
 export function Hero() {
   const { t } = useLocale();
   return (
-    <section className="relative h-[100svh] min-h-[640px] md:min-h-[760px] overflow-hidden isolate bg-bone">
+    <section className="relative h-[100dvh] md:h-[100svh] min-h-[100dvh] md:min-h-[760px] overflow-hidden isolate bg-bone">
       {/* DESKTOP — wide profile photo */}
       <img
         src="/profile_herenergy.png"
