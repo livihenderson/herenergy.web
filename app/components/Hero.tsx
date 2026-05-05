@@ -124,7 +124,7 @@ export function Hero() {
               HER
             </span>
           </span>
-          <span className="rise px-2 delay-4 block font-serif italic font-light text-[22vw] md:text-[11vw] tracking-[-0.02em] -mt-[0.02em] leading-[1.3] pb-[0.4em] overflow-visible bg-clip-text text-transparent bg-[linear-gradient(90deg,#3a1320_0%,#3a1320_44%,#c63a3a_50%,#fbe4d6_56%,#fbe4d6_100%)] drop-shadow-[0_2px_18px_rgba(0,0,0,0.35)]">
+          <span className="rise px-2 delay-4 block font-serif italic font-light text-[22vw] md:text-[11vw] tracking-[-0.02em] mt-[10vw] md:-mt-[0.02em] leading-[1.3] pb-[0.4em] overflow-visible bg-clip-text text-transparent bg-[linear-gradient(90deg,#3a1320_0%,#3a1320_44%,#c63a3a_50%,#fbe4d6_56%,#fbe4d6_100%)] drop-shadow-[0_2px_18px_rgba(0,0,0,0.35)]">
             energy
           </span>
         </h1>
