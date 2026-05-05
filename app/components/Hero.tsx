@@ -6,7 +6,7 @@ import { LocaleLink } from "./LocaleLink";
 export function Hero() {
   const { t } = useDictionary();
   return (
-    <section className="relative h-[110lvh] md:h-[100svh] min-h-[100lvh] md:min-h-[760px] overflow-hidden isolate bg-bone">
+    <section className="relative h-[110vh] md:h-[100svh] min-h-[100dvh] md:min-h-[760px] overflow-hidden isolate bg-bone">
       {/* DESKTOP — wide profile photo */}
       <img
         src="/profile_herenergy.png"
@@ -35,7 +35,7 @@ export function Hero() {
         src="/box_phone-32.png"
         alt=""
         aria-hidden
-        className="md:hidden reveal-up pointer-events-none select-none absolute bottom-[14%] right-[-32%] h-[58%] max-h-[600px] w-auto object-contain object-bottom z-30"
+        className="md:hidden reveal-up pointer-events-none select-none absolute bottom-[14%] right-[-32%] h-[58%] max-h-[600px] w-auto object-contain object-bottom z-[2]"
         style={{
           WebkitMaskImage:
             "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 95%)",
@@ -124,7 +124,7 @@ export function Hero() {
               HER
             </span>
           </span>
-          <span className="rise px-2 delay-4 block font-serif italic font-light text-[22vw] md:text-[11vw] tracking-[-0.02em] mt-[10vw] md:-mt-[0.02em] leading-[1.3] pb-[0.4em] overflow-visible bg-clip-text text-transparent bg-[linear-gradient(90deg,#3a1320_0%,#3a1320_44%,#c63a3a_50%,#fbe4d6_56%,#fbe4d6_100%)] drop-shadow-[0_2px_18px_rgba(0,0,0,0.35)]">
+          <span className="rise px-2 delay-4 block font-serif italic font-light text-[22vw] md:text-[11vw] tracking-[-0.02em] -mt-[0.02em] leading-[1.3] pb-[0.4em] overflow-visible bg-clip-text text-transparent bg-[linear-gradient(90deg,#3a1320_0%,#3a1320_44%,#c63a3a_50%,#fbe4d6_56%,#fbe4d6_100%)] drop-shadow-[0_2px_18px_rgba(0,0,0,0.35)]">
             energy
           </span>
         </h1>
