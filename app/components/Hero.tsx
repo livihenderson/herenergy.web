@@ -6,7 +6,7 @@ import { LocaleLink } from "./LocaleLink";
 export function Hero() {
   const { t } = useDictionary();
   return (
-    <section className="relative h-[110vh] md:h-[100svh] min-h-[100dvh] md:min-h-[760px] overflow-hidden isolate bg-bone">
+    <section className="relative h-[110lvh] md:h-[100svh] min-h-[100lvh] md:min-h-[760px] overflow-hidden isolate bg-bone">
       {/* DESKTOP — wide profile photo */}
       <img
         src="/profile_herenergy.png"
