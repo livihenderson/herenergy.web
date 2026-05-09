@@ -46,22 +46,18 @@ Set **Name** to: `HER energy DAY`
 
 - [ ] **Step 3: Fill in product description**
 
-Paste this into **Description** (markdown supported on Stripe's hosted Checkout page and receipt URL):
+Paste this into **Description** (Stripe enforces a **500-character** limit on this field — keep edits short. Markdown supported; this text shows on Stripe's hosted Checkout page and receipt URL).
 
 ```
 Jeden den. Dva opozity. Komunita, která tě postaví na nohy.
 
-📅 Sobota 30. května 2026
-📍 Titan Gym, Ďáblická 2, Praha
-🚋 Tramvaj: Sídliště Ďáblice
+📅 Sobota 30. května 2026 (od 11:00)
+📍 Titan Gym, Ďáblická 2, Praha · Tram: Sídliště Ďáblice
 
-Program:
-• 11:00 — Kamasutra Yoga (Yuliya Arkhiyereyeva)
-• 13:00 — Lunch & Coffee Break (Mr.Box)
-• 14:00 — Boxing Rave (Kateřina Čavajdová)
+Program: 11:00 Kamasutra Yoga · 13:00 Lunch · 14:00 Boxing Rave
 
-Co s sebou: pohodlné oblečení, ručník, láhev na vodu, dobrou náladu.
-Po zakoupení přijde potvrzení e-mailem. Těšíme se na tebe!
+Co s sebou: pohodlné oblečení, ručník, láhev na vodu.
+Těšíme se na tebe!
 ```
 
 - [ ] **Step 4: Set the price**
