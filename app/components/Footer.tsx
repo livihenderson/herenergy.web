@@ -63,8 +63,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <LocaleLink href="/akce" className="link-fancy text-bone/80">
-                  {t("Other events")}
+                <LocaleLink href="/box" className="link-fancy text-bone/80">
+                  {t("Box")}
+                </LocaleLink>
+              </li>
+              <li>
+                <LocaleLink href="/yoga" className="link-fancy text-bone/80">
+                  {t("Kamasutra Yoga")}
                 </LocaleLink>
               </li>
             </ul>

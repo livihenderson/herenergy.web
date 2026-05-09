@@ -1,6 +1,7 @@
 {
   "Home": "Главная",
-  "Other events": "Другие события",
+  "Box": "Бокс",
+  "Kamasutra Yoga": "Камасутра-йога",
   "Reserve": "Забронировать",
   "Women. Movement. Energy.": "Женщины. Движение. Энергия.",
   "Sensuality": "Чувственность",
@@ -19,7 +20,6 @@
   "Tenderness, breath, femininity. Kamasutra yoga opens body and mind — slow, deep, true.": "Нежность, дыхание, женственность. Камасутра-йога открывает тело и разум — медленно, глубоко, искренне к себе.",
   "Boxing as a ritual of resolve. Punches, breath, sweat. You’ll find a fighter you didn’t know was in you.": "Бокс как ритуал решимости. Удары, дыхание, пот. Ты найдёшь в себе воительницу, о которой и не знала.",
   "Main event": "Главное событие",
-  "May 9, 2026": "9 мая 2026",
   "One day. Two opposites. A community that lifts you up.": "Один день. Две противоположности. Сообщество, которое поставит тебя на ноги.",
   "Schedule": "Программа",
   "Day": "День",
@@ -37,16 +37,5 @@
   "Strength in sensuality. Sensuality in strength.": "Сила в чувственности. Чувственность в силе.",
   "Contact": "Контакт",
   "Follow": "Подписывайся",
-  "© 2026 HER ENERGY. All rights reserved.": "© 2026 HER ENERGY. Все права защищены.",
-  "Regular activities": "Регулярные активности",
-  "Every week there’s space for body and mind. See what’s on right now — and tap to reserve.": "Каждую неделю тебя ждёт пространство для тела и разума. Посмотри, что сейчас идёт — и забронируй своё место.",
-  "Fitbox for women": "Фитбокс для женщин",
-  "With a pro fighter": "С профи-боксёром",
-  "Train with Kateřina Čavajdová — 9 yrs of pro experience. Technique, conditioning, mindset.": "Тренируйся под руководством Катержины Чавайдовой — 9 лет опыта. Техника, кондиция, майндсет.",
-  "Tuesday & Thursday": "Вторник и четверг",
-  "19:00 – 20:00": "19:00 – 20:00",
-  "Titan Gym · Ďáblická 2": "Titan Gym · Ďáblická 2",
-  "Coming soon": "Скоро добавим",
-  "No news yet.": "Пока новостей нет.",
-  "Back to home": "На главную"
+  "© 2026 HER ENERGY. All rights reserved.": "© 2026 HER ENERGY. Все права защищены."
 }

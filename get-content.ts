@@ -2,11 +2,29 @@ import "server-only";
 import { i18n, type Locale } from "./i18n-config";
 
 export type ScheduleItem = { time: string; title: string; host: string };
-export type HostCard = { name: string; role: string; bio: string };
+export type HostCard = { name: string; role: string; bio: string; link?: string };
+
+export type ClassPage = {
+  eyebrow: string;
+  intro: string;
+  lecturer: {
+    name: string;
+    role: string;
+    headline: string;
+    body: string[];
+  };
+  schedule: {
+    when: string;
+    time: string;
+    where: string;
+  };
+};
 
 export type LocaleContent = {
   schedule: ScheduleItem[];
   hosts: HostCard[];
+  box: ClassPage;
+  yoga: ClassPage;
 };
 
 const contentLoaders: Record<Locale, () => Promise<LocaleContent>> = {

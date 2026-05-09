@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { i18n, type Locale } from "@/i18n-config";
-import { AkcePage } from "../../components/AkcePage";
+import { getContent } from "@/get-content";
+import { YogaPage } from "../../components/YogaPage";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -9,15 +10,15 @@ export async function generateStaticParams() {
 export const dynamicParams = false;
 
 const TITLES: Record<Locale, string> = {
-  cs: "Další akce — HER ENERGY",
-  en: "Other events — HER ENERGY",
-  ru: "Другие события — HER ENERGY",
+  cs: "Kamasutra Yoga — HER ENERGY",
+  en: "Kamasutra Yoga — HER ENERGY",
+  ru: "Камасутра-йога — HER ENERGY",
 };
 
 const DESCRIPTIONS: Record<Locale, string> = {
-  cs: "Pravidelné aktivity HER ENERGY: box pro ženy v úterý a čtvrtek, brzy i kamasutra yoga a další.",
-  en: "Regular HER ENERGY activities: boxing for women on Tuesdays and Thursdays — kamasutra yoga and more coming soon.",
-  ru: "Регулярные активности HER ENERGY: бокс для женщин по вторникам и четвергам — скоро камасутра-йога и другое.",
+  cs: "Kámasútra Yoga s Yuliyí Arkhiyereyevou. Pomalý, hluboký flow pro ženské tělo. Titan Gym, Praha.",
+  en: "Kamasutra Yoga with Yuliya Arkhiyereyeva. Slow, deep flow for the female body. Titan Gym, Prague.",
+  ru: "Камасутра-йога с Юлией Архиереевой. Медленный, глубокий флоу для женского тела. Titan Gym, Прага.",
 };
 
 export async function generateMetadata({
@@ -26,7 +27,7 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = (await params) as { lang: Locale };
-  const path = "/akce";
+  const path = "/yoga";
   const canonical = lang === i18n.defaultLocale ? path : `/${lang}${path}`;
   const languages: Record<string, string> = Object.fromEntries(
     i18n.locales.map((l) => [
@@ -43,6 +44,10 @@ export async function generateMetadata({
   };
 }
 
-export default function Page() {
-  return <AkcePage />;
+export default async function Page(props: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = (await props.params) as { lang: Locale };
+  const { yoga } = await getContent(lang);
+  return <YogaPage data={yoga} />;
 }

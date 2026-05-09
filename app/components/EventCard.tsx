@@ -11,25 +11,21 @@ export function EventCard({ schedule }: { schedule: ScheduleItem[] }) {
       className="relative bg-ink text-bone py-28 md:py-40 overflow-hidden"
     >
       <div className="grain absolute inset-0 pointer-events-none" />
-      {/* Background ENERGY */}
-      <div
-        aria-hidden
-        className="absolute -bottom-12 left-0 right-0 text-center font-display tracking-[0.05em] text-[28vw] leading-none text-bone/[0.04] select-none"
-      >
-        9 · 5 · 26
-      </div>
 
       <div className="relative mx-auto max-w-6xl px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-7">
             <div className="inline-flex items-center gap-3 font-display tracking-[0.4em] text-[11px] uppercase text-ember">
               <span className="inline-block w-1.5 h-1.5 bg-ember rounded-full heartbeat" />
-              {t("Main event")} · {t("May 9, 2026")}
+              {t("Main event")}
             </div>
-            <h2 className="mt-6 font-serif text-6xl md:text-8xl leading-[0.88] tracking-tight">
+            <div className="mt-4 font-display tracking-tight text-7xl md:text-[9rem] text-ember leading-[0.85]">
+              30 · 5 · 26
+            </div>
+            <h2 className="mt-8 font-serif text-6xl md:text-8xl leading-[0.88] tracking-tight">
               <span className="bg-wine text-bone px-3 font-display tracking-[0.04em]">HER</span>{" "}
               <span className="italic font-light">energy</span>
-              <span className="block font-display tracking-[0.04em] text-ember text-5xl md:text-7xl mt-3">
+              <span className="block font-display tracking-[0.04em] text-bone text-5xl md:text-7xl mt-3">
                 DAY
               </span>
             </h2>

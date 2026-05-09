@@ -35,8 +35,8 @@ export function Duality() {
             <div className="font-display tracking-[0.4em] text-[11px] uppercase text-wine">
               01 — {t("Sensuality")}
             </div>
-            <h3 className="mt-4 font-serif italic text-5xl md:text-6xl text-ink leading-[0.95]">
-              {t("Sensuality")}.
+            <h3 className="mt-4 font-display tracking-[0.04em] text-6xl md:text-7xl text-ink leading-[0.9] uppercase">
+              {t("Sensuality")}
             </h3>
             <p className="mt-6 text-lg text-ink/80 leading-relaxed">
               {t("Tenderness, breath, femininity. Kamasutra yoga opens body and mind — slow, deep, true.")}

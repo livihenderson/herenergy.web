@@ -47,6 +47,17 @@ export function Hosts({ hosts }: { hosts: HostCard[] }) {
                 </div>
               </div>
               <p className="mt-5 text-ink/80 leading-relaxed">{p.bio}</p>
+              {p.link && (
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-2 font-display tracking-[0.25em] text-[10px] uppercase text-wine hover:text-ink transition-colors"
+                >
+                  {p.link.replace(/^https?:\/\//, "")}
+                  <span aria-hidden>→</span>
+                </a>
+              )}
             </article>
           ))}
         </div>
