@@ -17,14 +17,14 @@ export default async function Page(props: {
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = (await props.params) as { lang: Locale };
-  const { schedule, hosts } = await getContent(lang);
+  const { event, schedule, hosts } = await getContent(lang);
   return (
     <>
       <Hero />
       <Manifesto />
       <Duality />
       <Hosts hosts={hosts} />
-      <EventCard schedule={schedule} />
+      <EventCard event={event} schedule={schedule} />
       <Community />
     </>
   );
