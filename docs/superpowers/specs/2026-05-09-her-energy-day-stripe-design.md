@@ -55,7 +55,7 @@ No webhook, no API route, no database, no email service, no inventory math on ou
    - Quantity: locked to 1 (no quantity selector)
    - Collect: **email** (default) and **name**. Do not collect: phone, address.
    - Limit number of payments: **45** with auto-disable on
-   - After payment: redirect to `https://<production-domain>/cs/dekujeme` *(production domain to confirm with Olivia: `herenergy.cz`?)*
+   - After payment: redirect to `https://herenergy.cz/cs/dekujeme`
    - **Single redirect for all locales** — Stripe Payment Links allow only one fixed success URL. v1 ships with the Czech thank-you page for everyone (acceptable trade-off; multilingual buyers see Czech for ~5 seconds before they read their email). v2 can split into one Payment Link per locale if it becomes a real issue.
    - Localized **checkout**: append `?locale=cs|en|ru` to the Payment Link URL when rendering the button so Stripe's checkout page itself shows in the visitor's language.
 
