@@ -4,6 +4,7 @@ export const content: LocaleContent = {
   event: {
     shortDate: "30 · 5 · 26",
     fullDate: "Суббота, 30 мая 2026",
+    price: "1190 Kč",
     whatToBring: "Удобная одежда, полотенце, бутылка воды и хорошее настроение.",
   },
   schedule: [

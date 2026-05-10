@@ -23,6 +23,7 @@ export type ClassPage = {
 export type EventInfo = {
   shortDate: string;
   fullDate: string;
+  price: string;
   whatToBring: string;
 };
 

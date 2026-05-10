@@ -53,7 +53,7 @@ export function EventCard({
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <span className="inline-flex items-center px-4 py-4 font-display tracking-[0.25em] text-xs uppercase text-bone/60 border border-bone/20">
-                {t("890 Kč")}
+                {event.price}
               </span>
             </div>
 
