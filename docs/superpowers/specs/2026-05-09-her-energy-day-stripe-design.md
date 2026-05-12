@@ -6,14 +6,14 @@
 
 ## Goal
 
-Sell tickets to the **HER energy DAY** event (30 May 2026, 890 CZK) directly from the homepage `EventCard` CTA, using Stripe. Other CTAs on the site (Box · Phoenix, Yoga · Yuliya) keep their existing Reservio link and are out of scope.
+Sell tickets to the **HER energy DAY** event (30 May 2026, 1190 CZK) directly from the homepage `EventCard` CTA, using Stripe. Other CTAs on the site (Box · Phoenix, Yoga · Yuliya) keep their existing Reservio link and are out of scope.
 
 ## Constraints and decisions
 
 | Question | Decision | Why |
 |---|---|---|
 | Which CTAs use Stripe in v1? | HER energy DAY only | One-off event; per-class CTAs will use Reservio later |
-| Ticket variants | One: 890 CZK | No tiers, no early-bird |
+| Ticket variants | One: 1190 CZK | No tiers, no early-bird |
 | Quantity per checkout | 1 ticket per checkout | Lets us use Stripe's built-in payment-count cap as the inventory enforcer with zero code |
 | Venue capacity | 40 attendees | Hard physical limit |
 | Stripe Payment Link cap | **45 payments** | +5 buffer to absorb refunds/cancellations, since Stripe's cap does not auto-restore a seat after a refund |
@@ -32,7 +32,7 @@ Homepage EventCard CTA
         ▼
 Stripe-hosted checkout page
    • Email + name collected
-   • 890 CZK, quantity locked to 1
+   • 1190 CZK, quantity locked to 1
    • Cap auto-enforced at 45
    • Receipt email sent by Stripe (contains product description)
         │
@@ -47,7 +47,7 @@ No webhook, no API route, no database, no email service, no inventory math on ou
 ### Stripe (sandbox first, then live)
 
 1. **Product:** "HER energy DAY"
-   - Price: 890 CZK, one-time
+   - Price: 1190 CZK, one-time
    - Description (markdown): event date · location · harmonogram · "what to bring" · "see you there" line in HER Energy voice. **This text is what shows up in the buyer's receipt** — invest in it.
    - Image: optional, an event poster
 

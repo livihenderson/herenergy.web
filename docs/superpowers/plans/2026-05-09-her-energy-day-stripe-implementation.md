@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Wire the homepage "Rezervovat your spot" CTA on `EventCard` to a Stripe Payment Link so visitors can buy HER energy DAY tickets (890 CZK, hard-capped at 45 purchases via Stripe), with a thank-you page on our site that carries the full event details.
+**Goal:** Wire the homepage "Rezervovat your spot" CTA on `EventCard` to a Stripe Payment Link so visitors can buy HER energy DAY tickets (1190 CZK, hard-capped at 45 purchases via Stripe), with a thank-you page on our site that carries the full event details.
 
 **Architecture:** Stripe Payment Link (Stripe-hosted checkout, no backend code). One-line URL change in `EventCard.tsx` plus a new `/dekujeme` thank-you page rendered for cs/en/ru. Stripe enforces capacity via its built-in payment-count cap; nothing on our side counts tickets.
 
@@ -46,29 +46,25 @@ Set **Name** to: `HER energy DAY`
 
 - [ ] **Step 3: Fill in product description**
 
-Paste this into **Description** (markdown supported on Stripe's hosted Checkout page and receipt URL):
+Paste this into **Description** (Stripe enforces a **500-character** limit on this field — keep edits short. Markdown supported; this text shows on Stripe's hosted Checkout page and receipt URL).
 
 ```
 Jeden den. Dva opozity. Komunita, která tě postaví na nohy.
 
-📅 Sobota 30. května 2026
-📍 Titan Gym, Ďáblická 2, Praha
-🚋 Tramvaj: Sídliště Ďáblice
+📅 Sobota 30. května 2026 (od 11:00)
+📍 Titan Gym, Ďáblická 2, Praha · Tram: Sídliště Ďáblice
 
-Program:
-• 11:00 — Kamasutra Yoga (Yuliya Arkhiyereyeva)
-• 13:00 — Lunch & Coffee Break (Mr.Box)
-• 14:00 — Boxing Rave (Kateřina Čavajdová)
+Program: 11:00 Kamasutra Yoga · 12:30 Lunch · 14:00 Boxing Rave
 
-Co s sebou: pohodlné oblečení, ručník, láhev na vodu, dobrou náladu.
-Po zakoupení přijde potvrzení e-mailem. Těšíme se na tebe!
+Co s sebou: pohodlné oblečení, ručník, láhev na vodu.
+Těšíme se na tebe!
 ```
 
 - [ ] **Step 4: Set the price**
 
 Under **Pricing**:
 - **Pricing model:** Standard pricing
-- **Price:** `890`
+- **Price:** `1190`
 - **Currency:** CZK — Czech Koruna
 - **Billing:** One-time
 
@@ -80,7 +76,7 @@ If you have an event poster (square or 16:9), upload it under **Image**. Skip if
 
 Click **Add product** (or **Save**). You should land on the new product's detail page. Note the **Product ID** (starts with `prod_…`) for your own records — not used in code.
 
-**Verify:** The product appears in **Product catalog** with name "HER energy DAY", price "Kč 890,00", and the description visible on the detail page.
+**Verify:** The product appears in **Product catalog** with name "HER energy DAY", price "Kč 1190,00", and the description visible on the detail page.
 
 ---
 
@@ -90,7 +86,7 @@ Click **Add product** (or **Save**). You should land on the new product's detail
 
 - [ ] **Step 1: Start a new Payment Link**
 
-On the **HER energy DAY** product detail page, click **Create payment link** (or open **Payments → Payment links** in the sidebar and click **+ New**, then choose the HER energy DAY product). Confirm the line item shows: **HER energy DAY × 1 × Kč 890,00**.
+On the **HER energy DAY** product detail page, click **Create payment link** (or open **Payments → Payment links** in the sidebar and click **+ New**, then choose the HER energy DAY product). Confirm the line item shows: **HER energy DAY × 1 × Kč 1190,00**.
 
 - [ ] **Step 2: Lock quantity to 1**
 
@@ -124,7 +120,7 @@ Under **After payment** (or **Confirmation page**):
 
 Click **Create link**. Stripe shows the Payment Link URL — looks like `https://buy.stripe.com/test_aBcDeFgHiJ...` for sandbox. **Copy this URL.** You'll paste it into `.env.local` next.
 
-**Verify:** The Payment Link is listed under **Payments → Payment links**, status **Active**, with cap "45" visible. Clicking the URL opens Stripe's Checkout page in Czech (default), showing HER energy DAY 890 Kč × 1.
+**Verify:** The Payment Link is listed under **Payments → Payment links**, status **Active**, with cap "45" visible. Clicking the URL opens Stripe's Checkout page in Czech (default), showing HER energy DAY 1190 Kč × 1.
 
 ---
 
@@ -283,7 +279,7 @@ export function DekujemePage() {
   const { t } = useDictionary();
   const scheduleRows = [
     { time: "11:00", title: "Kamasutra Yoga", host: "Yuliya Arkhiyereyeva" },
-    { time: "13:00", title: "Lunch & Coffee Break", host: "Mr.Box" },
+    { time: "12:30", title: "Lunch & Coffee Break", host: "Mr.Box" },
     { time: "14:00", title: "Boxing Rave", host: "Kateřina Čavajdová" },
   ];
 
@@ -599,7 +595,7 @@ Expected: clean build with `/[lang]/dekujeme` listed in the route output for cs,
 
 You should land on Stripe Checkout (sandbox banner at top). Verify:
 - ✅ Product name: HER energy DAY
-- ✅ Price: 890 Kč × 1
+- ✅ Price: 1190 Kč × 1
 - ✅ Quantity is **not adjustable**
 - ✅ Email and name fields are present, no phone, no address
 - ✅ Page is in Czech (because `?locale=cs` was appended)
@@ -630,7 +626,7 @@ Open `http://localhost:3000/cs/dekujeme` directly in the browser. Verify:
 - [ ] **Step 6: Check the email receipt**
 
 In your inbox, find the Stripe receipt (subject usually "Receipt from HER ENERGY"). Verify:
-- ✅ Amount: Kč 890,00
+- ✅ Amount: Kč 1190,00
 - ✅ Description / line item shows "HER energy DAY"
 - ✅ "View payment details" link opens a Stripe-hosted page that shows the full product description
 

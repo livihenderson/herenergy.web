@@ -1,6 +1,12 @@
 import type { LocaleContent } from "../get-content";
 
 export const content: LocaleContent = {
+  event: {
+    shortDate: "30 · 5 · 26",
+    fullDate: "Saturday 30 May 2026",
+    price: "1190 Kč",
+    whatToBring: "Comfortable clothing, a towel, a water bottle, and good vibes.",
+  },
   schedule: [
     { time: "11:00", title: "Kamasutra Yoga", host: "Yuliya Arkhiyereyeva" },
     { time: "12:30", title: "Lunch & Coffee Break", host: "Mr.Box" },

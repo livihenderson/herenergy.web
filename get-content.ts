@@ -20,7 +20,15 @@ export type ClassPage = {
   };
 };
 
+export type EventInfo = {
+  shortDate: string;
+  fullDate: string;
+  price: string;
+  whatToBring: string;
+};
+
 export type LocaleContent = {
+  event: EventInfo;
   schedule: ScheduleItem[];
   hosts: HostCard[];
   box: ClassPage;

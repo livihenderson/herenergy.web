@@ -1,10 +1,21 @@
 "use client";
 
 import { useDictionary } from "./DictionaryProvider";
-import type { ScheduleItem } from "@/get-content";
+import type { EventInfo, ScheduleItem } from "@/get-content";
 
-export function EventCard({ schedule }: { schedule: ScheduleItem[] }) {
-  const { t } = useDictionary();
+const PAYMENT_LINK = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK ?? "";
+
+export function EventCard({
+  event,
+  schedule,
+}: {
+  event: EventInfo;
+  schedule: ScheduleItem[];
+}) {
+  const { t, lang } = useDictionary();
+  const reserveHref = PAYMENT_LINK
+    ? `${PAYMENT_LINK}?locale=${lang}`
+    : "#rezervace";
   return (
     <section
       id="rezervace"
@@ -20,7 +31,7 @@ export function EventCard({ schedule }: { schedule: ScheduleItem[] }) {
               {t("Main event")}
             </div>
             <div className="mt-4 font-display tracking-tight text-7xl md:text-[9rem] text-ember leading-[0.85]">
-              30 · 5 · 26
+              {event.shortDate}
             </div>
             <h2 className="mt-8 font-serif text-6xl md:text-8xl leading-[0.88] tracking-tight">
               <span className="bg-wine text-bone px-3 font-display tracking-[0.04em]">HER</span>{" "}
@@ -35,16 +46,14 @@ export function EventCard({ schedule }: { schedule: ScheduleItem[] }) {
 
             <div className="mt-10 flex flex-wrap gap-3">
               <a
-                href="https://www.reservio.com/"
-                target="_blank"
-                rel="noreferrer noopener"
+                href={reserveHref}
                 className="group inline-flex items-center gap-3 bg-ember text-ink px-6 py-4 font-display tracking-[0.25em] text-xs uppercase hover:bg-bone transition-colors"
               >
                 {t("Reserve your spot")}
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
               <span className="inline-flex items-center px-4 py-4 font-display tracking-[0.25em] text-xs uppercase text-bone/60 border border-bone/20">
-                {t("890 Kč")}
+                {event.price}
               </span>
             </div>
 
