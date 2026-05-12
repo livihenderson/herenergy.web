@@ -95,7 +95,7 @@ export function BoxPage({ data }: { data: ClassPage }) {
 
               <div className="mt-10 flex flex-wrap items-center gap-3">
                 <a
-                  href="https://www.reservio.com/"
+                  href="https://her-energy.reservio.com"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="group inline-flex items-center gap-3 bg-ember text-ink px-6 py-4 font-display tracking-[0.25em] text-xs uppercase hover:bg-bone transition-colors"
