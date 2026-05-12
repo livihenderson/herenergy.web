@@ -1,7 +1,6 @@
 "use client";
 
 import { useDictionary } from "./DictionaryProvider";
-import { LocaleLink } from "./LocaleLink";
 import type { ClassPage } from "@/get-content";
 
 export function BoxPage({ data }: { data: ClassPage }) {
@@ -106,12 +105,6 @@ export function BoxPage({ data }: { data: ClassPage }) {
                     →
                   </span>
                 </a>
-                <LocaleLink
-                  href="/"
-                  className="inline-flex items-center gap-2 font-display tracking-[0.3em] text-xs uppercase text-bone/70 hover:text-bone border-b border-bone/30 hover:border-bone pb-1"
-                >
-                  ← {t("Home")}
-                </LocaleLink>
               </div>
             </div>
           </article>

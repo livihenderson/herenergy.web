@@ -6,6 +6,7 @@ import { EventCard } from "../components/EventCard";
 import { Hero } from "../components/Hero";
 import { Hosts } from "../components/Hosts";
 import { Manifesto } from "../components/Manifesto";
+import { Reviews } from "../components/Reviews";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -25,6 +26,7 @@ export default async function Page(props: {
       <Duality />
       <Hosts hosts={hosts} />
       <EventCard event={event} schedule={schedule} />
+      <Reviews />
       <Community />
     </>
   );
