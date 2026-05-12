@@ -61,6 +61,12 @@ export function Navigation() {
           >
             {t("Kamasutra Yoga")}
           </LocaleLink>
+          <LocaleLink
+            href="/fotogalerie"
+            className="link-fancy font-display tracking-[0.18em] text-[12px] uppercase"
+          >
+            {t("Gallery")}
+          </LocaleLink>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -94,6 +100,9 @@ export function Navigation() {
             </LocaleLink>
             <LocaleLink href="/yoga" onClick={() => setOpen(false)} className="font-serif text-2xl text-ink">
               {t("Kamasutra Yoga")}
+            </LocaleLink>
+            <LocaleLink href="/fotogalerie" onClick={() => setOpen(false)} className="font-serif text-2xl text-ink">
+              {t("Gallery")}
             </LocaleLink>
             <LocaleLink
               href="/#rezervace"

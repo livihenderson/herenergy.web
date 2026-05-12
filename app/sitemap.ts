@@ -4,7 +4,7 @@ import { i18n } from "@/i18n-config";
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://herenergy.cz";
 
-const routes = ["/", "/box", "/yoga"] as const;
+const routes = ["/", "/box", "/yoga", "/fotogalerie"] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((path) => {
