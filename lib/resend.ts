@@ -1,14 +1,25 @@
 import "server-only";
 import { Resend } from "resend";
 
-const apiKey = process.env.RESEND_API_KEY;
+let resendInstance: Resend | null = null;
 
-if (!apiKey) {
-  // Don't throw at module load — let the route handler fail with a clear
-  // error if Resend is actually invoked without configuration.
-  console.warn("RESEND_API_KEY is not set — confirmation emails will fail.");
+/**
+ * Lazily construct the Resend client. The SDK throws if the API key
+ * is missing at construction time — but Next.js imports server modules
+ * during the build (for route collection), and env vars may not be
+ * available then. By deferring construction we avoid build-time failures
+ * and only fail at actual send time if the key is missing.
+ */
+export function getResend(): Resend {
+  if (resendInstance) return resendInstance;
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error(
+      "RESEND_API_KEY is not set — cannot send confirmation emails.",
+    );
+  }
+  resendInstance = new Resend(apiKey);
+  return resendInstance;
 }
-
-export const resend = new Resend(apiKey ?? "");
 
 export const FROM_EMAIL = "HER ENERGY <noreply@herenergy.cz>";
