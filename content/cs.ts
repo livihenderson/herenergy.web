@@ -9,7 +9,8 @@ export const content: LocaleContent = {
   },
   schedule: [
     { time: "12:00", title: "Boxing Rave", host: "Kateřina Čavajdová" },
-    { time: "13:00", title: "Lunch & Coffee Break", host: "Vaření a ochutnávka s Termomixem" },
+    { time: "13:00", title: "Lunch & Coffee Break", host: "Mr.Box" },
+    { time: "13:30", title: "Vaření dezertu", host: "Termomix" },
     { time: "14:00", title: "Kamasutra Yoga", host: "Yuliya Arkhiyereyeva" },
   ],
   hosts: [
