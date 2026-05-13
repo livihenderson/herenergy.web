@@ -13,7 +13,7 @@ export function Duality() {
 
           {/* Mobile: full-width raw image. Desktop: w-2/3 with feathered inner edge + multiply blend */}
           <img
-            src="/kamasutra_joga.jpg"
+            src="/kamasutra_joga.webp"
             alt="Kamasutra Yoga"
             className="absolute right-0 top-0 h-full w-full md:w-2/3 object-cover object-center md:mix-blend-multiply md:opacity-85"
           />
@@ -49,7 +49,7 @@ export function Duality() {
           <div className="grain absolute inset-0 pointer-events-none hidden md:block" />
 
           <img
-            src="/sila_profile.jpg"
+            src="/sila_profile.webp"
             alt="Box · Phoenix"
             className="absolute left-0 top-0 h-full w-full md:w-2/3 object-cover object-center md:opacity-95 md:saturate-90"
           />

@@ -40,7 +40,7 @@ export function YogaPage({ data }: { data: ClassPage }) {
             <div className="lg:col-span-5 relative">
               <div className="relative aspect-[3/4] overflow-hidden">
                 <img
-                  src="/mama_stretch.jpg"
+                  src="/mama_stretch.webp"
                   alt="Kamasutra Yoga"
                   className="absolute inset-0 w-full h-full object-cover object-top"
                 />

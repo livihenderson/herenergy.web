@@ -25,10 +25,10 @@ export function Community() {
           <div className="md:col-span-5">
             <div className="grid grid-cols-2 gap-3">
               {[
-                "/dychani.jpg",
-                "/punch.jpg",
-                "/zebrik.jpg",
-                "/ramena.jpg",
+                "/dychani.webp",
+                "/punch.webp",
+                "/zebrik.webp",
+                "/ramena.webp",
               ].map((src, i) => (
                 <div
                   key={i}

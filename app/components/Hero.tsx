@@ -9,7 +9,7 @@ export function Hero() {
     <section className="relative h-[110lvh] md:h-[100svh] min-h-[100lvh] md:min-h-[760px] overflow-hidden isolate bg-bone">
       {/* DESKTOP — wide profile photo */}
       <img
-        src="/profile_herenergy.png"
+        src="/profile_herenergy.webp"
         alt="HER ENERGY — Kamasutra Yoga & Phoenix Boxing"
         className="reveal-up hidden md:block absolute inset-0 w-full h-full object-cover object-bottom select-none"
       />
@@ -20,7 +20,7 @@ export function Hero() {
         <div className="bg-gradient-to-bl from-ink via-ink-soft to-wine-deep" />
       </div>
       <img
-        src="/kamasutra_phone-31.png"
+        src="/kamasutra_phone-31.webp"
         alt=""
         aria-hidden
         className="md:hidden reveal-up pointer-events-none select-none absolute bottom-[14%] left-[-32%] h-[58%] max-h-[600px] w-auto object-contain object-bottom z-[2]"
@@ -32,7 +32,7 @@ export function Hero() {
         }}
       />
       <img
-        src="/box_phone-32.png"
+        src="/box_phone-32.webp"
         alt=""
         aria-hidden
         className="md:hidden reveal-up pointer-events-none select-none absolute bottom-[14%] right-[-32%] h-[58%] max-h-[600px] w-auto object-contain object-bottom z-30"

@@ -3,10 +3,10 @@
 import { useDictionary } from "./DictionaryProvider";
 
 const reviews = [
-  "/recenze1.jpg",
-  "/recenze2.jpg",
-  "/recenze3.jpg",
-  "/recenze4.jpg",
+  "/recenze1.webp",
+  "/recenze2.webp",
+  "/recenze3.webp",
+  "/recenze4.webp",
 ];
 
 export function Reviews() {

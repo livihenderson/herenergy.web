@@ -39,7 +39,7 @@ export function BoxPage({ data }: { data: ClassPage }) {
             <div className="lg:col-span-5 relative">
               <div className="relative aspect-[3/4] overflow-hidden">
                 <img
-                  src="/box_kata_profil.JPG"
+                  src="/box_kata_profil.webp"
                   alt="Box · Phoenix"
                   className="absolute inset-0 w-full h-full object-cover"
                 />

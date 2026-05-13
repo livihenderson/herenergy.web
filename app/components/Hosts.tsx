@@ -4,9 +4,9 @@ import { useDictionary } from "./DictionaryProvider";
 import type { HostCard } from "@/get-content";
 
 const portraits = [
-  "/kata_profile.jpg",
-  "/kamasutra_profile.jpg",
-  "/lunchbox_profile.jpg",
+  "/kata_profile.webp",
+  "/kamasutra_profile.webp",
+  "/lunchbox_profile.webp",
 ];
 
 export function Hosts({ hosts }: { hosts: HostCard[] }) {
