@@ -9,7 +9,7 @@ export const content: LocaleContent = {
   },
   schedule: [
     { time: "12:00", title: "Boxing Rave", host: "Kateřina Čavajdová" },
-    { time: "13:00", title: "Lunch & Coffee Break", host: "Mr.Box" },
+    { time: "13:00", title: "Lunch & Coffee Break", host: "Cooking and tasting with Thermomix" },
     { time: "14:00", title: "Kamasutra Yoga", host: "Yuliya Arkhiyereyeva" },
   ],
   hosts: [
@@ -42,6 +42,16 @@ export const content: LocaleContent = {
         "She runs the women's boxing classes at Titan Gym. From first technique to full confidence in the ring — and well beyond.",
         "More info coming soon.",
       ],
+      credentials: [
+        { value: "9+", label: "Years experience" },
+        { value: "5", label: "Years Czech national team" },
+        { value: "★", label: "International medalist" },
+        { value: "PRO", label: "Pro boxer" },
+      ],
+      specialization: ["Mindset", "Discipline", "Strength", "Phoenix Mentality"],
+      focus: ["Women", "Confidence", "Boxing", "Inner Strength"],
+      tagline:
+        "I help women become stronger, disciplined and fearless through boxing.",
     },
     schedule: {
       when: "Tuesday & Thursday",
@@ -58,8 +68,19 @@ export const content: LocaleContent = {
       role: "Fitness coach and sexologist",
       headline: "An original method for the female body.",
       body: [
-        "I've brought together what usually lives apart: physical conditioning and intimate health. Strength training, Pilates, body ballet, fitness Kamasutra, pelvic-floor work and elements of kamasutra — woven into one coherent practice.",
+        "A form of feminine movement focused on the pelvis, opening the hips, breath and reconnecting with your own body.",
+        "The pelvis is the centre of feminine energy. It's where women often hold tension, stress, emotion and blocks from everyday pressure. Through mindful movement, breath and gentle techniques we learn to release the body, sense it more clearly and properly activate the deep core and pelvic floor.",
       ],
+      benefits: [
+        "Improve mobility and release in the pelvis",
+        "Work better with feminine energy and confidence",
+        "Support correct posture",
+        "Activate the pelvic floor and deep core",
+        "Improve your relationship with your own body",
+        "Release tension and stress stored in the body",
+      ],
+      tagline:
+        "It's about connecting movement, femininity and inner work — from within.",
     },
     schedule: {
       when: "To be announced",

@@ -34,6 +34,14 @@ export function Footer() {
               <li>Titan Gym</li>
               <li>Ďáblická 2, Praha</li>
               <li>{t("Tram stop: Sídliště Ďáblice")}</li>
+              <li>
+                <a
+                  href="mailto:herenergyclass@gmail.com"
+                  className="link-fancy"
+                >
+                  herenergyclass@gmail.com
+                </a>
+              </li>
             </ul>
           </div>
 

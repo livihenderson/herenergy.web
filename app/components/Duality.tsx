@@ -49,7 +49,7 @@ export function Duality() {
           <div className="grain absolute inset-0 pointer-events-none hidden md:block" />
 
           <img
-            src="/box_beztextu.png"
+            src="/sila_profile.jpg"
             alt="Box · Phoenix"
             className="absolute left-0 top-0 h-full w-full md:w-2/3 object-cover object-center md:opacity-95 md:saturate-90"
           />

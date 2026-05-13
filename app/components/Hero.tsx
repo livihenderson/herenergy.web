@@ -129,6 +129,18 @@ export function Hero() {
           </span>
         </h1>
 
+        <div
+          aria-label="30. května 2026"
+          className="rise delay-5 -mt-[4vw] md:-mt-[2vw] flex items-center gap-3 md:gap-5"
+        >
+          <span className="hidden md:block h-px w-16 bg-wine/50" />
+          <span className="font-serif italic font-medium text-[16vw] md:text-[5vw] leading-none tracking-[-0.01em] bg-clip-text text-transparent bg-[linear-gradient(90deg,#3a1320_0%,#8a2440_45%,#c63a3a_100%)] drop-shadow-[0_2px_10px_rgba(58,19,32,0.25)]">
+            <span className="md:hidden">30.5</span>
+            <span className="hidden md:inline">30.5.2026</span>
+          </span>
+          <span className="hidden md:block h-px w-16 bg-wine/50" />
+        </div>
+
         <p className="rise delay-5 mt-4 md:mt-5 max-w-xl font-serif italic text-sm md:text-xl text-ink hidden md:block">
           <span className="bg-bone/70 backdrop-blur-sm px-3 py-1">{t("Two opposites. One woman.")}</span>
         </p>

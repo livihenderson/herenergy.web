@@ -117,6 +117,56 @@ export function YogaPage({ data }: { data: ClassPage }) {
           </article>
         </div>
       </section>
+
+      {/* Benefits + tagline */}
+      {(data.lecturer.benefits || data.lecturer.tagline) && (
+        <section className="relative bg-bone py-20 md:py-28 overflow-hidden">
+          <div className="grain absolute inset-0 pointer-events-none" />
+          <div
+            aria-hidden
+            className="absolute inset-x-0 -top-6 text-center font-serif italic font-light text-[18vw] leading-none text-wine/[0.06] select-none pointer-events-none"
+          >
+            energy
+          </div>
+
+          <div className="relative mx-auto max-w-5xl px-6 md:px-10">
+            {data.lecturer.benefits && (
+              <>
+                <div className="text-center">
+                  <div className="font-display tracking-[0.4em] text-[11px] uppercase text-wine">
+                    {t("Kamasutra yoga helps")}
+                  </div>
+                </div>
+
+                <div className="mt-10 md:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+                  {data.lecturer.benefits.map((b) => (
+                    <div
+                      key={b}
+                      className="border border-wine/20 bg-bone-warm/40 p-6 md:p-7 flex items-start gap-3"
+                    >
+                      <span
+                        aria-hidden
+                        className="mt-1 inline-block w-1.5 h-1.5 rounded-full bg-wine shrink-0"
+                      />
+                      <span className="font-serif text-lg md:text-xl text-ink leading-snug">
+                        {b}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+
+            {data.lecturer.tagline && (
+              <blockquote className="mt-16 md:mt-20 max-w-3xl mx-auto text-center">
+                <span className="font-serif italic text-2xl md:text-4xl leading-snug text-ink">
+                  “{data.lecturer.tagline}”
+                </span>
+              </blockquote>
+            )}
+          </div>
+        </section>
+      )}
     </>
   );
 }

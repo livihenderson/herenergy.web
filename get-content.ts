@@ -12,6 +12,11 @@ export type ClassPage = {
     role: string;
     headline: string;
     body: string[];
+    credentials?: { value: string; label: string }[];
+    specialization?: string[];
+    focus?: string[];
+    benefits?: string[];
+    tagline?: string;
   };
   schedule: {
     when: string;
