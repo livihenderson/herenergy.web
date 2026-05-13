@@ -131,12 +131,16 @@ export function Hero() {
 
         <div
           aria-label="30. května 2026"
-          className="rise delay-5 -mt-[4vw] md:-mt-[2vw] flex items-center gap-3 md:gap-5"
+          className="rise delay-5 -mt-[4vw] md:-mt-[2vw] flex items-center gap-3 md:gap-5 relative z-40"
         >
           <span className="hidden md:block h-px w-16 bg-wine/50" />
-          <span className="font-serif italic font-medium text-[16vw] md:text-[5vw] leading-none tracking-[-0.01em] bg-clip-text text-transparent bg-[linear-gradient(90deg,#3a1320_0%,#8a2440_45%,#c63a3a_100%)] drop-shadow-[0_2px_10px_rgba(58,19,32,0.25)]">
-            <span className="md:hidden">30.5</span>
-            <span className="hidden md:inline">30.5.2026</span>
+          {/* Mobile — bone pill with wine text, sits above figures */}
+          <span className="md:hidden inline-block bg-bone/95 backdrop-blur-sm px-4 py-1 font-serif italic font-medium text-[13vw] leading-none tracking-[-0.01em] text-wine shadow-[0_6px_24px_rgba(58,19,32,0.25)]">
+            30.5
+          </span>
+          {/* Desktop — gradient text */}
+          <span className="hidden md:inline font-serif italic font-medium text-[5vw] leading-none tracking-[-0.01em] bg-clip-text text-transparent bg-[linear-gradient(90deg,#3a1320_0%,#8a2440_45%,#c63a3a_100%)] drop-shadow-[0_2px_10px_rgba(58,19,32,0.25)]">
+            30.5.2026
           </span>
           <span className="hidden md:block h-px w-16 bg-wine/50" />
         </div>
