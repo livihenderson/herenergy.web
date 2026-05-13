@@ -51,10 +51,10 @@ Paste this into **Description** (Stripe enforces a **500-character** limit on th
 ```
 Jeden den. Dva opozity. Komunita, která tě postaví na nohy.
 
-📅 Sobota 30. května 2026 (od 11:00)
+📅 Sobota 30. května 2026 (od 12:00)
 📍 Titan Gym, Ďáblická 2, Praha · Tram: Sídliště Ďáblice
 
-Program: 11:00 Kamasutra Yoga · 12:30 Lunch · 14:00 Boxing Rave
+Program: 12:00 Boxing Rave · 13:00 Lunch · 14:00 Kamasutra Yoga
 
 Co s sebou: pohodlné oblečení, ručník, láhev na vodu.
 Těšíme se na tebe!
@@ -278,9 +278,9 @@ import { LocaleLink } from "./LocaleLink";
 export function DekujemePage() {
   const { t } = useDictionary();
   const scheduleRows = [
-    { time: "11:00", title: "Kamasutra Yoga", host: "Yuliya Arkhiyereyeva" },
-    { time: "12:30", title: "Lunch & Coffee Break", host: "Mr.Box" },
-    { time: "14:00", title: "Boxing Rave", host: "Kateřina Čavajdová" },
+    { time: "12:00", title: "Boxing Rave", host: "Kateřina Čavajdová" },
+    { time: "13:00", title: "Lunch & Coffee Break", host: "Mr.Box" },
+    { time: "14:00", title: "Kamasutra Yoga", host: "Yuliya Arkhiyereyeva" },
   ];
 
   return (

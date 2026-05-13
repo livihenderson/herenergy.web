@@ -8,9 +8,9 @@ export const content: LocaleContent = {
     whatToBring: "Удобная одежда, полотенце, бутылка воды и хорошее настроение.",
   },
   schedule: [
-    { time: "11:00", title: "Камасутра-йога", host: "Yuliya Arkhiyereyeva" },
-    { time: "12:30", title: "Ланч и кофе-брейк", host: "Mr.Box" },
-    { time: "14:00", title: "Boxing Rave", host: "Kateřina Čavajdová" },
+    { time: "12:00", title: "Boxing Rave", host: "Kateřina Čavajdová" },
+    { time: "13:00", title: "Ланч и кофе-брейк", host: "Mr.Box" },
+    { time: "14:00", title: "Камасутра-йога", host: "Yuliya Arkhiyereyeva" },
   ],
   hosts: [
     {
