@@ -95,6 +95,10 @@ export function EventCard({
                   <span className="inline-block w-1 h-1 bg-ember rounded-full" />
                   {t("Tram stop: Sídliště Ďáblice")}
                 </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="inline-block w-1 h-1 bg-ember rounded-full" />
+                  {t("Boxing gloves (or rent on-site for 50 Kč)")}
+                </div>
               </div>
             </div>
           </div>
